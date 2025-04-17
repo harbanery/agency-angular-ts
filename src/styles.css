@@ -1,1 +1,39 @@
+@import "@fontsource/inter/index.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* You can add global styles to this file, and also import other style files */
+
+button.custom-button {
+  @apply inline-flex justify-center items-center gap-2 rounded-md transition-all ease-in-out duration-300;
+}
+
+button.custom-button.primary {
+  @apply bg-shade-100 hover:bg-shade-200 focus:bg-shade-300 active:bg-shade-400 disabled:bg-neutral-silver border-transparent focus:border-neutral-dark-gray text-white disabled:text-neutral-gray-blue;
+}
+
+button.custom-button.secondary {
+  @apply bg-white hover:bg-neutral-silver focus:bg-neutral-silver active:bg-neutral-silver disabled:bg-neutral-silver border-shade-100 focus:border-neutral-light-gray active:border-transparent disabled:border-transparent text-shade-100 disabled:text-neutral-gray-blue;
+}
+
+button.custom-button.tertiary {
+  @apply bg-transparent hover:bg-neutral-silver active:bg-tint-500 disabled:bg-neutral-silver border-transparent focus:border-neutral-dark-gray text-shade-100 disabled:text-neutral-gray-blue;
+}
+
+button.custom-button.large {
+  @apply px-8 py-4 text-body-large;
+}
+
+button.custom-button.medium {
+  @apply px-8 py-[14px] text-body-medium;
+}
+
+button.custom-button.small {
+  @apply px-6 py-2 text-body-small;
+}
+
+a.custom-link {
+  @apply underline;
+}
