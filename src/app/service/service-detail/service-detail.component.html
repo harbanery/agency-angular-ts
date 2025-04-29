@@ -1,0 +1,24 @@
+<section class="flex flex-col pt-8 gap-12 justify-between items-center">
+  <div
+    class="flex flex-row-reverse h-screen px-[144px] py-28 justify-between items-center"
+  >
+    <div class="w-full h-full flex flex-col gap-8 justify-start items-start">
+      <div
+        class="flex flex-col gap-8 justify-between items-start"
+        *ngIf="post$ | async as post"
+      >
+        <h1 class="text-header-small text-neutral-dark-gray uppercase">
+          {{ post.title }}
+        </h1>
+        <p class="text-body-medium text-neutral-gray">
+          {{ post.body }}
+        </p>
+        <p-floatlabel variant="in" class="w-full">
+          <input id="username" pInputText class="w-full" [(ngModel)]="value" />
+          <label for="username">Username</label>
+        </p-floatlabel>
+        <p-button label="Submit" (onClick)="onSubmit()" />
+      </div>
+    </div>
+  </div>
+</section>

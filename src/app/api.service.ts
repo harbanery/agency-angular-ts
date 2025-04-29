@@ -13,4 +13,8 @@ export class ApiService {
   getPosts(): Observable<any> {
     return this.http.get(`${this.apiUrl}/posts`);
   }
+
+  getPost(id: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/posts/${id}`);
+  }
 }
